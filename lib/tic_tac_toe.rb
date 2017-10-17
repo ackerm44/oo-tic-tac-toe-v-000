@@ -44,11 +44,20 @@ class TicTacToe
     input = gets.strip
     @index = input_to_index(input)
     if valid_move?(@index)
-      move(index, current_player)
+      move(@index, current_player)
       display_board(board)
     else
       turn
     end
+  end
+
+  def turn_countcounter = 0
+    board.each do |cell|
+      if cell == "X" || cell == "O"
+        counter += 1
+      end
+    end
+    return counter
   end
 
 end
