@@ -80,7 +80,7 @@ class TicTacToe
   end
 
   def full?
-    !board.include?(" ") && !board.include?("")
+    !@board.include?(" ") && !@board.include?("")
   end
 
 
